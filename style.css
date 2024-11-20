@@ -1,98 +1,73 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+
+
+
 body {
-    background-color: #121212; /* Dark background color for a sleek look */
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 20px;
-    color: white;
-}
-header {
-    width: 100%;
-    background-color: #1f1f1f;
-    text-align: center;
-    padding: 20px;
-    color: white;
-    font-size: 2rem;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-.heart, .skeleton, .muscle, .brain {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 40px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #2a2a2a;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    width: 90%; /* Set width to 90% to avoid stretching on wider screens */
-    margin: 20px auto; /* Center the sections */
-}
-.left {
-    position: relative;
-    display: inline-block;
-    margin-right: 30px;
-    flex: 2; /* Give more space to the model */
-    padding: 10px;
-    background-color: #333;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-iframe {
-    border-radius: 8px;
-    width: 100%;
-    height: 500px; /* Increased the height to emphasize the models */
-}
-.upCover, .downCover {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    background-color: #121212;
-}
-.upCover {
-    top: 0;
-    height: 15%;
-}
-.downCover {
-    top: 80%;
-    height: 20%;
-}
-.right {
-    color: white;
-    background-color: #444;
-    flex: 1; /* Less space for the text, models should be the main focus */
-    padding: 20px;
-    margin-left: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #ccc;
-    margin-top: 10px;
-}
-footer {
-    width: 100%;
-    text-align: center;
-    color: #aaa;
-    background-color: #1f1f1f;
-    padding: 10px;
-    font-size: 0.9rem;
-    margin-top: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-size: 1000px;
+  background-image: url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
+  background-position: center center;
 }
 
-footer p {
-    margin: 0;
+.paper {
+  background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
+  background-size: 500px;
+  background-position: center center;
+  padding: 20px 100px;
+/*  min-width: 800px; */
+  
+  transform: rotateZ(-5deg);
+  box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+  
+  position: absolute;
+}
+
+.paper.heart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.paper.image {
+  padding: 10px;
+}
+.paper.image p {
+  font-size: 30px;
+}
+
+img {
+  max-height: 200px;
+  width: 100%;
+  user-select: none;
+}
+
+.paper.heart::after {
+  content: "";
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994__340.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+p {
+  font-family: 'Zeyada';
+  font-size: 50px;
+  color: rgb(0,0,100);
+  opacity: 0.75;
+  user-select: none;
+  
+   filter: drop-shadow(2px 1.5px 1px rgba(0,0,105,0.9));
 }
